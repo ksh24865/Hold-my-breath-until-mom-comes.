@@ -51,10 +51,27 @@ Python >= 3.0
 
 Installation
 =======
-
+* clone
 ```sh
 $ git clone https://github.com/ksh24865/I_will_hold_my_breath_until_my_mom_comes.git
 ```
+
+* set
+  * usb-control (usb포트 제어)
+  ```sh
+  $ apt-get install libusb-dev
+  $ sudo apt-get update
+  $ sudo apt-get install libusb-dev
+  $ git clone https://github.com/codazoda/hub-ctrl.c
+  $ cd hub-ctrl.c
+  $ gcc -o hub-ctrl hub-ctrl.c -lusb
+  $ cp hub-ctrl ~
+  ```
+  * adafruit_dht (온습도 측정 제어)
+  ```sh
+  $ sudo pip3 install adafruit_dht
+  ```
+  
 
 Run
 =======
