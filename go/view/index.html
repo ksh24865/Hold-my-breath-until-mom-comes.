@@ -1,0 +1,41 @@
+<!--index.html-->
+
+<!--Embed the header.html template at this location-->
+{{ template "header.html" .}}
+
+  <!--Loop over the `payload` variable, which is the list of articles-->
+  <br>
+  <div>
+    
+    <center>
+      <div id="tm-video-container">
+        <video autoplay muted loop id="tm-video">
+            <source src="/vibe/video/ocean-sea-wave-video.mp4" type="video/mp4">
+        </video>  
+        <i id="tm-video-control-button" class="fas fa-pause"></i>
+    </div>
+    <div id="signals">
+      <h3>{{.payload.Temperature}}℃&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        {{.payload.Humidity}}%&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        {{.payload.Weight}}Kg</h3>
+      </div>
+      <a href="/" class="btn btn-info" role="button"><img src="/vibe/img/humid.png" width="200" height="200" hspace=40></a>
+      <a href="/" class="btn btn-info" role="button"><img src="/vibe/img/blanket.png" width="200" height="200" hspace=40></a>
+      <a href="/" class="btn btn-info" role="button"><img src="/vibe/img/humid.png" width="200" height="200" hspace=40></a>
+      <a href="/" class="btn btn-info" role="button"><img src="/vibe/img/blanket.png" width="200" height="200" hspace=40></a>
+    </center>
+    </div>
+  
+    <h5>We are 스시소 </h5>
+    <br/>
+    <p class="text-muted">Presented by 김성호</p>
+    <script>
+      function autoRefresh_signals_div()
+      {
+      var currentLocation = window.location.href;
+      $('#signals').fadeOut('slow').load(currentLocation + '#signals').fadeIn("slow");
+      }
+      setInterval('autoRefresh_signals_div()', 5000); //5초 후 새로고침
+      </script>
+<!--Embed the footer.html template at this location-->
+{{ template "footer.html" .}}
