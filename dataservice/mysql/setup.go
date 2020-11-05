@@ -11,7 +11,7 @@ const (
 	dbms = "mysql"
 	user = "root"
 	pass = "`1q2w3e4r"
-	db   = "baby"
+	db   = "BABY_VIBE"
 )
 
 var dbConn *gorm.DB

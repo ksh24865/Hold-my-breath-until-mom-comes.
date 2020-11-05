@@ -6,5 +6,4 @@ type Signal struct {
 	Humidity    float32 `json:"humid" gorm:"type:double(10,2)"`
 	Weight      float32 `json:"wegiht" gorm:"type:double(10,2)"`
 	
-
 }

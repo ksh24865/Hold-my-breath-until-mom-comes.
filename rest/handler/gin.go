@@ -21,7 +21,7 @@ type GinHandler struct {
 }
 
 func NewGinHandler(msuc usecase.ManageSignalUsecase) *GinHandler {
-	RunPythonScript("py/baby_care.py")
+	//RunPythonScript("py/baby_care.py")
 	return &GinHandler{
 		msuc:    msuc,
 		Humid:   0,
