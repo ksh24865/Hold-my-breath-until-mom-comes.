@@ -1,0 +1,102 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Embed the header.html template at this location-->
+{{ template "header.html" .}}
+
+<html>
+<head>
+<title> back </title>
+</head>
+<style>
+body{
+
+  background-image : url('/vibe/img/background2.png');
+
+  background-repeat : no-repeat;
+
+  background-size : cover;
+}
+</style>
+
+</html>
+  <!--Loop over the `payload` variable, which is the list of articles-->
+  <br>
+  <div>
+    
+    <center>
+      
+            <img src="/vibe/img/siba.png" width="700" height="300" hspace=40>
+          </center>
+    </div>
+    <div id="signals">
+      <br>
+      <center>
+      <b>{{.payload.Temperature}}℃&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        {{.payload.Humidity}}%&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+        <b><a href="/graph" onclick="window.open(this.href, '_blank', 'width=1100px,height=600px,toolbars=no,scrollbars=no'); return false;">{{.payload.Weight}}Kg</a></b>
+      </center>
+      </br>
+      </div>
+      <center>
+      <img class="btn" onclick="humid()" src="/vibe/img/humid.png" width="200" height="200" hspace=40>
+      <img class="btn" onclick="blanket()" src="/vibe/img/blanket.png" width="200" height="200" hspace=40>
+      <img class="btn" onclick="lamp()" src="/vibe/img/lamp.png" width="200" height="200" hspace=40>
+    </center>
+      <style>
+        .btn {cursor:pointer;}
+        </style>
+    
+    </div>
+  
+    <br/>
+    <p class="text-muted">Team Vibe</p>
+    
+    <script>
+      function humid() {
+            fetch(
+                "http://localhost:8080/humid", {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                }
+            )
+          }
+      function blanket() {
+        fetch(
+            "http://localhost:8080/blanket", {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            }
+        )
+      }
+      function lamp() {
+        fetch(
+            "http://localhost:8080/lamp", {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            }
+        )
+      }
+      
+  
+  if({{.payload.Weight}}<1)
+    alert("아이의 탈출이 포착되었습니다.");
+
+  if({{.payload.Temperature}}<=20)
+    alert("현재 기온이 20도 이하입니다. 전기담요를 켭니다.");
+
+  
+
+  
+     
+      </script>
+<!--Embed the footer.html template at this location-->
+{{ template "footer.html" .}}
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- event 처리하는 함수를 event handler라 부름 
+        (여기서는 displayDate가 event handler임) -->
+    <button onchange="" onclick="fetchh()">CLICK</button>
+    <script>
+    function fetchh() {
+        fetch(
+            "http://localhost:8080/on", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            }
+        )
+    }
+    </script>
+    <p id="demo1"></p>
+</body>
+</html>

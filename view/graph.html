@@ -1,0 +1,40 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+	<title>Baby Vibe - Baby growth graph</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawVisualization);
+	
+		function drawVisualization() { 
+			var data = google.visualization.arrayToDataTable([
+					['Day', 'MyBaby', 'AVG'],
+					['5',  7.4, 7.9, ],
+					['6',  7.8,8.5,  ],
+					['7',  8.3,8.7,  ],
+					['8',  8.7,9.0,  ],
+					['9',  9.2,9.4,  ],
+					['10',  9.5,9.6,  ],
+					['11',  9.9,9.7,  ],
+					['12',  10.6,10.4,  ],
+					['13',  11.3,11,  ],
+					['14',  12.0,11.7,  ],
+					['15',  12.5,12.3,  ]
+				]);
+			var options = {
+					title : 'Baby growth graph',
+					vAxis: {title: 'Weight(Kg)'},
+					hAxis: {title: 'Months old'}, 
+					seriesType: 'line',
+				};
+			
+			var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+			chart.draw(data, options);
+		}
+	</script>
+</head>
+<body>
+	<div id="chart_div" style="width:900px; height: 500px;"></div>
+</body>
+</html>
