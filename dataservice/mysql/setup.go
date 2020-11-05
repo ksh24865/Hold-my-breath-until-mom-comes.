@@ -26,6 +26,7 @@ func Setup() {
 
 	dbConn.AutoMigrate(
 		&model.Signal{},
+		&model.Weight{},
 	)
 	//dbConn.Model(&model.Signal{}).AddForeignKey("writer_id", "users(id)", "CASCADE", "CASCADE")
 }

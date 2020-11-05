@@ -4,15 +4,25 @@ import (
 	"github.com/baby-vibe/dataservice/mysql"
 	"github.com/baby-vibe/rest/handler"
 	"github.com/baby-vibe/usecase/manageSignal"
+	"github.com/baby-vibe/usecase/manageWeight"
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
+	println("-1")
 	mysql.Setup()
+	println("-2")
 	sr := mysql.NewSignalRepo()
+	println("0")
+	wr := mysql.NewWeightRepo()
+	println("1")
 	msuc := manageSignal.NewManageSignalUsecase(sr)
-	h := handler.NewGinHandler(msuc)
+	println("2")
+	mwuc := manageWeight.NewManageWeightUsecase(wr)
+	println("3")
+	h := handler.NewGinHandler(msuc, mwuc)
+	println("4")
 
 	gin.SetMode(gin.ReleaseMode)
 	r := gin.Default()

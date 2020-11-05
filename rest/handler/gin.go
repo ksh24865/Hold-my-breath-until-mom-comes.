@@ -14,16 +14,18 @@ func catchPanic() {
 
 type GinHandler struct {
 	msuc     usecase.ManageSignalUsecase
+	mwuc	 usecase.ManageWeightUsecase
 	signalID int
 	Humid    int
 	Blanket  int
 	Lamp     int
 }
 
-func NewGinHandler(msuc usecase.ManageSignalUsecase) *GinHandler {
+func NewGinHandler(msuc usecase.ManageSignalUsecase, mwuc usecase.ManageWeightUsecase) *GinHandler {
 	//RunPythonScript("py/baby_care.py")
 	return &GinHandler{
 		msuc:    msuc,
+		mwuc:	 mwuc,
 		Humid:   0,
 		Blanket: 0,
 		Lamp:    0,

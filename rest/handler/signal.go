@@ -21,11 +21,7 @@ func (h *GinHandler) ShowIndexPage(c *gin.Context) {
 		c.AbortWithError(http.StatusNotFound, err)
 	}
 }
-func (h *GinHandler) ShowGraphPopup(c *gin.Context) {
-	// Check if the article ID is valid
-	render(c, gin.H{
-		"title": "Home Page"}, "graph.html")
-}
+
 func (h *GinHandler) RunTest1(c *gin.Context) {
 	if h.Humid == 0 {
 		h.Humid = 1

@@ -15,18 +15,6 @@ func NewManageSignalUsecase(sr repository.SignalRepo) *manageSignal {
 	}
 }
 
-/*
-
-
-func (mauc *manageSignal) CreateNewSignal(temper, humid, wegiht float32) (*model.Signal, error) {
-	a := model.Signal{
-		Temperature:     temper,
-		Humidity:   humid,
-		Weight: wegiht,
-	}
-	return mauc.sr.Create(&a)
-}
-*/
 func (msuc *manageSignal) GetSignalByID(id int) (*model.Signal, error) {
 	return msuc.sr.GetByID(id)
 }
