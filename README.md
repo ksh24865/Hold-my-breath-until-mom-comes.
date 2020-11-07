@@ -5,7 +5,9 @@ Table of contents
 =================
 <!--ts-->
    * [Concept drawing](#concept-drawing)
+   * [Page view](#page-view)
    * [Role](#role)
+   
    * [Result](#result)
    * [Requirement](#requirement)
    * [Installation](#installation)
@@ -27,6 +29,11 @@ Concept drawing
     * 라즈베리파이 중량 모듈 연결 -> push 중량체크 push ->서버에 보냄 
     * 라즈베리파이, esp 쿨링 
     * 라즈베리파이 전기장판(보류)
+
+Page view
+=======
+![GIF_8a6ea61c-e73b-45c1-a825-d428ce465528](https://user-images.githubusercontent.com/55729930/98451175-a86d4600-2186-11eb-81fe-e0a208c1e8dd.gif)
+
 
 Role
 =======
