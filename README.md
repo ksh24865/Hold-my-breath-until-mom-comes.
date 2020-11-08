@@ -13,7 +13,7 @@ Table of contents
 Page view
 =======
 ![GIF_8a6ea61c-e73b-45c1-a825-d428ce465528](https://user-images.githubusercontent.com/55729930/98451175-a86d4600-2186-11eb-81fe-e0a208c1e8dd.gif)
-
+![GIF_5a4682f5-7c51-476b-9790-7a3043865687](https://user-images.githubusercontent.com/55729930/98461292-506a2a00-21ee-11eb-9345-8e1efed82a14.gif)
 Concept drawing
 ===============
   * Concept drawing
