@@ -18,7 +18,9 @@ Concept drawing
 ===============
   * Concept drawing
   
-![Concept_drawing](https://user-images.githubusercontent.com/55729930/93132617-f29af380-f710-11ea-8908-0b2027bf75bd.png)
+![그림1](https://user-images.githubusercontent.com/55729930/98460627-60cbd600-21e9-11eb-915e-277a313f2ccc.png)
+
+![그림2](https://user-images.githubusercontent.com/55729930/98460630-61fd0300-21e9-11eb-86cf-3ef715bef533.png)
 
   * To do
   
